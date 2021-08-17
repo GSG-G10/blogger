@@ -55,3 +55,13 @@ a{
     border-color: rgb(252, 165, 165);
     color: rgb(252, 165, 165);
 }
+
+.category-black{
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.category-red{
+    border-color: rgb(220, 38, 38);
+    color: rgb(220, 38, 38);
+}
