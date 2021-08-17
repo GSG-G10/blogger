@@ -1,0 +1,170 @@
+<!doctype html>
+
+<head>
+
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/shared.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body style="font-family: Open Sans, sans-serif">
+
+    <div id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h2>Add New Post</h2>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+            <form action="/" method="post">
+                <label for="">Username</label>
+                <input type="text" name="user" placeholder="username">
+
+                <label>Post</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <label>Categories</label>
+                <select name="categories[]" multiple id="">
+                    <option value="1">ads</option>
+                    <option value="1">ads</option>
+                    <option value="1">ads</option>
+                </select>
+
+                <div class="button-div">
+                    <button type="submit" id="save-button">Save</button>
+                </div>
+            </form>
+            </div>
+          </div>
+    </div>
+
+    <section class="main-section">
+        <nav class="nav">
+            <button type="button" id="modal-button">New Post</button>
+        </nav>
+        <header class="header">
+            
+            <h1>
+                Latest <span>Blog</span> News
+            </h1>
+
+            <h2>By Nizar & Abdallah</h2>
+
+            <p>
+                Another year. Another update. We're refreshing the blog with new content.
+                I'm going to keep you guys up to speed with what's going on!
+            </p>
+        </header>
+
+        <main class="container">
+            <article class="article">
+                <div class="article-content">
+                    <div class="article-img">
+                        <img src="./images/2.png" alt="Alt text">
+                    </div>
+
+                    <div class="artical-content">
+                        <header class="article-header">
+                            <div>
+                                <a href="#"
+                                   class="category category-blue"
+                                   style="font-size: 10px">Techniques</a>
+
+                                <a href="#"
+                                   class="category category-orange"
+                                   style="font-size: 10px">Updates</a>
+                            </div>
+
+                            <div class="title">
+                                <h1>
+                                    This is a big title and it will look great on two or even three lines. Wooohoo!
+                                </h1>
+
+                                <span>
+                                        Published <time>1 day ago</time>
+                                </span>
+                            </div>
+                        </header>
+
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+
+                        <footer class="article-footer">
+                            <h5>Abdallah</h5>
+
+                            <a href="#">Read More</a>
+                        </footer>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <div class="article-content">
+                    <div class="article-img">
+                        <img src="./images/1.png" alt="Alt text">
+                    </div>
+
+                    <div class="artical-content">
+                        <header class="article-header">
+                            <div>
+                                <a href="#"
+                                   class="category category-blue"
+                                   style="font-size: 10px">Techniques</a>
+
+                                <a href="#"
+                                   class="category category-orange"
+                                   style="font-size: 10px">Updates</a>
+                            </div>
+
+                            <div class="title">
+                                <h1>
+                                    This is a big title and it will look great on two or even three lines. Wooohoo!
+                                </h1>
+
+                                <span>
+                                        Published <time>1 day ago</time>
+                                </span>
+                            </div>
+                        </header>
+
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+
+                        <footer class="article-footer">
+                            <h5>Abdallah</h5>
+
+                            <a href="#">Read More</a>
+                        </footer>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </section>
+    <script src="./js/app.js"></script>
+</body>

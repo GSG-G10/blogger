@@ -1,0 +1,57 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+}
+
+blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+  
+.container{
+    max-width: 72rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+.main-section{
+    padding: 2rem 1.5rem ;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.category{
+    padding: 0.25rem 0.75rem;
+    border: 1px solid;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.category-blue{
+    border-color: rgb(96, 165, 250);
+    color: rgb(96, 165, 250);
+}
+
+.category-orange{
+    border-color: rgb(252, 165, 165);
+    color: rgb(252, 165, 165);
+}

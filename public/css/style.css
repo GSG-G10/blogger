@@ -1,0 +1,253 @@
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#modal-button, #save-button{
+    background-color: rgb(59, 130, 246);
+    color: white;
+    cursor: pointer;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+	padding: 0.75rem 1.25rem;
+}
+
+#save-button{
+    margin-top: 1rem;
+}
+
+.button-div{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header{
+    max-width: 36rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.header h1{
+    font-size: 2.25rem;
+    line-height: 2.5rem;    
+}
+
+.header h2{
+    display: inline-flex;
+    margin-top: 0.5rem;
+}
+
+.header p{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 3.5rem;
+}
+
+.header span{
+    color: rgba(59, 130, 246,1);
+}
+
+.article{
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.article:hover{
+    background-color: rgb(229, 231, 235, 0.8);
+    border-color: rgba(0, 0, 0, 0.05);
+
+}
+
+.article-content{
+    padding: 1.5rem 1.25rem;
+}
+
+.article-img{
+    flex: 1 1 0%;
+    margin-bottom: 1.25rem;
+}
+
+.article-img img{
+    border-radius: 0.75rem;
+}
+
+.artical-content{
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.artical-header{
+    margin-top: 2rem;
+}
+
+
+
+.title{
+    margin-top: 1rem;
+}
+
+.title h1{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.title span{
+    margin: 0.5rem;
+    display: block;
+    color: rgb(97, 99, 102);
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.content{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.content p{
+    margin-bottom: 0.75rem;
+}
+
+.article-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.article-footer h5{
+    font-weight: 700;
+}
+
+.article-footer a{
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    background-color: rgb(199, 201, 211);
+    text-decoration: none;
+    border-radius: 9999px;
+    color: black;
+    padding: 0.5rem 2rem ;
+}
+
+.article-footer a:hover{
+    background-color: rgb(161, 162, 167);
+}
+
+#modal{
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.modal-body {
+    padding: 1rem 2rem;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 0.75rem;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    margin-bottom: 0.75rem;
+}
+
+/* large screen */
+@media (min-width: 1280px) {
+    .article-content{
+        display: flex;
+    }
+
+    .article-img{
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+    .artical-header{
+        margin-top: 0;
+    }
+}
