@@ -4,6 +4,7 @@ const {
 } = require('./postController');
 const { showComments, createComment } = require('./commentsController');
 const { showCategories } = require('./categoriesController');
+const { showError404Page, showError500Page } = require('./errorController');
 
 const router = express.Router();
 
@@ -14,4 +15,8 @@ router.get('/comments/:postId', showComments);
 router.post('/post/create', createPost);
 router.post('/comments/:postId/create', createComment);
 router.get('/categories', showCategories);
+
+router.use(showError404Page);
+router.use(showError500Page);
+
 module.exports = router;
