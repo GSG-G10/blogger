@@ -2,7 +2,7 @@
 const dbBuild = require('../server/database/builds/build');
 const connection = require('../server/database/config/connection');
 const {
-  getPosts, getComments, insertPost, insertComment,
+  getPosts, getComments, insertPost,
 } = require('../server/database/queries');
 
 beforeEach(() => dbBuild());

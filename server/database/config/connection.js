@@ -1,7 +1,7 @@
 require('env2')('.env');
 const { Pool } = require('pg');
 
-const { DB_URL, TEST_DB_URL, DEV_DB_URL } = process.env;
+const { DATABASE_URL, TEST_DB_URL, DEV_DB_URL } = process.env;
 
 let dbUrl = '';
 if (process.env.NODE_ENV === 'test') {
@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'test') {
 } else if (process.env.NODE_ENV === 'development') {
   dbUrl = DEV_DB_URL;
 } else if (process.env.NODE_ENV === 'production') {
-  dbUrl = DB_URL;
+  dbUrl = DATABASE_URL;
 } else { throw new Error('sth wroing'); }
 
 const options = {
