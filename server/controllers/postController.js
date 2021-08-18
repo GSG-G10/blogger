@@ -1,3 +1,4 @@
+const { join } = require('path');
 const moment = require('moment');
 
 const {
@@ -13,6 +14,7 @@ const showPosts = (req, res) => {
 
 const createPost = (req, res) => {
   const { username, title, body } = req.body;
+  console.log(req.body)
   const createdAt = moment().format('YYYY-MM-DD');
 
   insertPost({
@@ -21,10 +23,15 @@ const createPost = (req, res) => {
     .then(() => {
       res.redirect('/');
     })
-    .catch((err) => res.status(500).json({ msg: '500 intenrnal server error' }));
+    .catch(console.log)
+    // .catch((err) => res.status(500).json({ msg: '500 intenrnal server error' }));
 };
 
+const showSinglePost = (req, res) => {
+  res.sendFile(join(__dirname, '..', '..', 'public', 'post.html'));
+};
 module.exports = {
   createPost,
   showPosts,
+  showSinglePost,
 };

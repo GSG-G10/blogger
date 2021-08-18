@@ -1,10 +1,17 @@
 const connection = require('../config/connection');
 
+<<<<<<< HEAD
 const addPost = async ({
   username, title, body, createdAt, categories,
 }) => {
   try {
     await connection.query('BEGIN');
+=======
+const insertPost = ({
+  username, title, body, createdAt,
+}) => connection
+  .query('insert into posts (username, title, body, created_at) values($1, $2, $3, $4) RETURNING id, title', [username, title, body, createdAt]);
+>>>>>>> ba40c2a8e1e3e62ed6c890bccf56b3a50091eafd
 
     const insertPost = await connection
       .query('insert into posts (username,title, body, created_at) values($1,$2,$3,$4) returning id, title', [username, title, body, createdAt]);
