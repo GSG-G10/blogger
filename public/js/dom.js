@@ -64,7 +64,7 @@ const showArtical = (post) => {
 
   const articleImg = document.createElement('div');
   articleImg.classList.add('article-img');
-  articleImg.innerHTML = `<img src="./images/${Math.ceil(Math.random() * 3)}.png" alt="Alt text">`;
+  articleImg.innerHTML = `<img src="./images/${Math.ceil(Math.random() * 3)}.jpg" alt="Alt text">`;
 
   // article content
   const articleContent = document.createElement('div');
