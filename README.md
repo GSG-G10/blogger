@@ -18,15 +18,21 @@ as a User i am able to:
 blogger website consists of two pages :-
 1. Main Page
 
-        You can go to the home page and see the posts and then you can click the read more button to read more about this post
+        You can go to the home page and 
+        see the posts and then you can click the
+        read more button to read more 
+        about this post
 
 2. Post Page
 
-        You can see all the detail about the post like category, post body, post comments and you can also add a new comment
+        You can see all the detail about 
+        the post like category, post body,
+        post comments and you can also add
+        a new comment
 
 
 ## Database Schema
-
+![](/public/images/db_schema.png)
 
 ## Tech stack:
 - HTML
@@ -41,8 +47,8 @@ blogger website consists of two pages :-
 - Module.
 - Responsive Web Design.
 - database transactions.
-- database schema
+- database schema.
 
 ### Team members:
-* Nizar Khalil Zakout.
-* Abdallah Ahmed Abu Amra
+* [Nizar Khalil Zakout](https://github.com/Nizar7zak) .
+* [Abdallah Ahmed Abu Amra](https://github.com/aaamra) .
