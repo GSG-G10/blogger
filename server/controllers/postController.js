@@ -10,7 +10,7 @@ const {
 const showPosts = (req, res) => {
   getPosts()
     .then((data) => res.json(data.rows))
-    .catch(() => res.status(500).json({ msg: '500 intenrnal server error' }));
+    .catch((err) => res.status(500).json({ msg: err }));
 };
 
 const createPost = (req, res) => {
