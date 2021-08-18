@@ -1,11 +1,20 @@
 require('env2')('.env');
 const { Pool } = require('pg');
 
-const { DB_URL } = process.env;
-if (!DB_URL) throw new Error('sth wroing');
+const { DB_URL, TEST_DB_URL, DEV_DB_URL } = process.env;
+
+let dbUrl = '';
+if (process.env.NODE_ENV === 'test') {
+  dbUrl = TEST_DB_URL;
+} else if (process.env.NODE_ENV === 'development') {
+  dbUrl = DEV_DB_URL;
+} else if (process.env.NODE_ENV === 'production') {
+  dbUrl = DB_URL;
+} else { throw new Error('sth wroing'); }
+
 const options = {
-  connectionString: DB_URL,
-  ssl: false,
+  connectionString: dbUrl,
+  ssl: process.env.NODE_ENV === 'production',
 };
 
 module.exports = new Pool(options);
