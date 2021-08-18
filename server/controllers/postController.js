@@ -4,6 +4,7 @@ const moment = require('moment');
 const {
   getPosts,
   insertPost,
+  getSinglePost,
 } = require('../database/queries');
 
 const showPosts = (req, res) => {
@@ -30,8 +31,16 @@ const showSinglePost = (req, res) => {
   res.sendFile(join(__dirname, '..', '..', 'public', 'post.html'));
 };
 
+const singlePost = (req, res) => {
+  const { postId } = req.params;
+  getSinglePost(postId)
+    .then((data) => res.json(data.rows))
+    .catch(() => res.status(500).json({ msg: '500 intenrnal server error' }));
+};
+
 module.exports = {
   createPost,
   showPosts,
   showSinglePost,
+  singlePost,
 };

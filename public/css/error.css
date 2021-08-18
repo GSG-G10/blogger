@@ -36,7 +36,7 @@
     display: inline-block;
     width: 140px;
     height: 140px;
-    background-image: url('../images/error.png');
+    background-image: url('/images/error.png');
     background-size: cover ;
   }
   
