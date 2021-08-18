@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'test') {
 } else if (process.env.NODE_ENV === 'development') {
   dbUrl = DEV_DB_URL;
 } else if (process.env.NODE_ENV === 'production') {
-  dbUrl = DATABASE_URL;
+  dbUrl = process.env.DATABASE_URL;
 } else { throw new Error('sth wroing'); }
 
 const options = {
