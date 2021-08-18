@@ -9,27 +9,27 @@ const {
 const showPosts = (req, res) => {
   getPosts()
     .then((data) => res.json(data.rows))
-    .catch((err) => res.status(500).json({ msg: '500 intenrnal server error' }));
+    .catch(() => res.status(500).json({ msg: '500 intenrnal server error' }));
 };
 
 const createPost = (req, res) => {
-  const { username, title, body } = req.body;
-  console.log(req.body)
+  const {
+    username, title, body, categoryId,
+  } = req.body;
   const createdAt = moment().format('YYYY-MM-DD');
 
   insertPost({
-    username, title, body, createdAt,
+    username, title, body, createdAt, categoryId,
+  }).then(() => {
+    res.redirect('/');
   })
-    .then(() => {
-      res.redirect('/');
-    })
-    .catch(console.log)
-    // .catch((err) => res.status(500).json({ msg: '500 intenrnal server error' }));
+    .catch(() => res.status(500).json({ msg: '500 intenrnal server error' }));
 };
 
 const showSinglePost = (req, res) => {
   res.sendFile(join(__dirname, '..', '..', 'public', 'post.html'));
 };
+
 module.exports = {
   createPost,
   showPosts,
