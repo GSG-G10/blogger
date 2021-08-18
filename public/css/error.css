@@ -36,8 +36,8 @@
     display: inline-block;
     width: 140px;
     height: 140px;
-    background-image: url('../images/emoji.png');
-    background-size: cover;
+    background-image: url('../images/error.png');
+    background-size: cover ;
   }
   
   .notfound .notfound-404:before {
