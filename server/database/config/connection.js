@@ -8,14 +8,13 @@ if (process.env.NODE_ENV === 'test') {
   dbUrl = TEST_DB_URL;
 } else if (process.env.NODE_ENV === 'development') {
   dbUrl = DEV_DB_URL;
-} else {
+} else if (process.env.NODE_ENV === 'production') {
   dbUrl = DB_URL;
-}
-if (!dbUrl) throw new Error('sth wroing');
+} else { throw new Error('sth wroing'); }
 
 const options = {
-  connectionString: DB_URL,
-  ssl: false,
+  connectionString: dbUrl,
+  ssl: process.env.NODE_ENV === 'production',
 };
 
 module.exports = new Pool(options);
