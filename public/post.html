@@ -19,60 +19,38 @@
                 <div class="article-image">
                     <img src="/images/1.png" alt="">
 
-                    <p>
+                    <p id="createdAt">
                         Published <time>1 day ago</time>
                     </p>
 
-                    <h5>Lary Laracore</h5>
+                    <h5 id="username">Lary Laracore</h5>
                 </div>
 
                 <div class="artical-content">
                     <div class="banner">
-                        <a href="#">
+                        <a href="/">
                             <i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i> Back to Posts
                         </a>
 
                         <div>
-                            <a href="#" class="category category-blue" style="font-size: 10px">Techniques</a>
-                            <a href="#"
-                                class="category category-orange"
-                                style="font-size: 10px">Updates</a>
+                            <a href="#" id="category" class="category" style="font-size: 10px">Techniques</a>
                         </div>
                     </div>
 
-                    <h1>
+                    <h1 id="header-title">
                         This is a big title and it will look great on two or even three
                         lines. Wooohoo!
                     </h1>
 
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        <p id="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur.</p>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium,
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                            vitae
-                            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                            fugit.</p>
-
-
-                        <p>Magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-                            dolorem
-                            ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
-                            tempora
-                            incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
                     </div>
-                    <hr style="border: 1px solid;"/>
-                    <br>
                     <h1>Comments</h1>
-                    <div class="comments">
-                        <div class="comment" id="comment-1">
+                    <div class="comments" id="comments">
+                        <!-- <div class="comment" id="comment-1">
                             <div class="comment-heading">
                                 <div class="comment-info">
                                     <a href="#" class="comment-author">someguy14</a>
@@ -87,75 +65,10 @@
                                     This is really great! I fully agree with what you wrote, and this is sure to help me out in the future. Thank you for posting this.
                                 </p>
                             </div>
-                    
-                            <!-- <div class="replies">
-                                <div class="comment" id="comment-2">
-                                    <div class="comment-heading">
-        
-                                        <div class="comment-info">
-                                            <a href="#" class="comment-author">randomperson81</a>
-                                            <p class="m-0">
-                                                4 points &bull; 3 days ago
-                                            </p>
-                                        </div>
-                                    </div>
-                    
-                                    <div class="comment-body">
-                                        <p>
-                                            Took the words right out of my mouth!
-                                        </p>
-                                        <button type="button">Reply</button>
-                                        <button type="button">Flag</button>
-                                    </div>
-                                </div>
-                    
-                                <a href="#load-more">Load more replies</a>
-                            </div> -->
-                        </div>
-                        <div class="comment" id="comment-1">
-                            <div class="comment-heading">
-                                <div class="comment-info">
-                                    <a href="#" class="comment-author">someguy14</a>
-                                    <p class="m-0">
-                                        4 days ago
-                                    </p>
-                                </div>
-                            </div>
-                    
-                            <div class="comment-body">
-                                <p>
-                                    This is really great! I fully agree with what you wrote, and this is sure to help me out in the future. Thank you for posting this.
-                                </p>
-                            </div>
-                    
-                            <!-- <div class="replies">
-                                <div class="comment" id="comment-2">
-                                    <div class="comment-heading">
-        
-                                        <div class="comment-info">
-                                            <a href="#" class="comment-author">randomperson81</a>
-                                            <p class="m-0">
-                                                4 points &bull; 3 days ago
-                                            </p>
-                                        </div>
-                                    </div>
-                    
-                                    <div class="comment-body">
-                                        <p>
-                                            Took the words right out of my mouth!
-                                        </p>
-                                        <button type="button">Reply</button>
-                                        <button type="button">Flag</button>
-                                    </div>
-                                </div>
-                    
-                                <a href="#load-more">Load more replies</a>
-                            </div> -->
-                        </div>
+                        </div> -->
                     </div>
-                    <hr style="border: 1px solid; margin: 1rem 0;"/>
                     <h2 style="padding: 1rem 0;">New Comment</h2>
-                    <form action="" method="POST">
+                    <form action="" id="comment-form" method="POST">
                         <input type="text" name="username" placeholder="username">
 
                         <textarea name="body" placeholder="comment body ..." cols="30" rows="10"></textarea>
@@ -167,5 +80,8 @@
                 </div>
             </article>           
         </main>
+        <script src="/js/moment.js"></script>
+        <script src="/js/dom.js"></script>
+        <script src="/js/post.js"></script>
     </section>
 </body>

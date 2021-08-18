@@ -3,6 +3,7 @@ const insertPost = require('./insertPost');
 const getComments = require('./getComments');
 const insertComment = require('./insertComment');
 const getCategories = require('./getCategories');
+const getSinglePost = require('./getSinglePost');
 
 module.exports = {
   getPosts,
@@ -10,4 +11,5 @@ module.exports = {
   insertComment,
   getComments,
   insertPost,
+  getSinglePost,
 };
