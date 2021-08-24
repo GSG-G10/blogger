@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(compression());
 
 // app.use(express.static(join(__dirname, '..', 'public'), { maxAge: '30d' }));
-app.use(express.static(join(__dirname, '..', 'public')));
+app.use(express.static(join(__dirname, '..', ',,', 'public')));
 app.use(router);
 
 module.exports = app;
